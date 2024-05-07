@@ -27,10 +27,11 @@ int main(int argc, char** argv)
 	int numbers[10][7]={{0,0,0,1,1,0,1},{0,0,1,1,0,0,1}, {0,0,1,0,0,1,1}, {0,1,1,1,1,0,1}, {0,1,0,0,0,1,1},{0,1,1,0,0,0,1}, {0,1,0,1,1,1,1}, {0,1,1,1,0,1,1}, {0,1,1,0,1,1,1},{0,0,0,1,0,1,1}};
 	//freopen("input.txt", "r", stdin);
 	cin>>T;
-    cin >> row >> column;
 
 	for(test_case = 1; test_case <= T; ++test_case)
 	{
+		cin >> row >> column;
+		int start_row,end_column, start_column=-1;
 		for(int i=0; i<row; i++){
 			for(int j=0; j<column; j++){
 				cin >> c;
@@ -71,10 +72,10 @@ int main(int argc, char** argv)
 			for(int i=0; i<8; i++){
 				sum+=realCode[i];
 			}
-			cout << sum;
+			cout << "#" << test_case << " " << sum << endl;
 		}
 		else{
-			cout << 0;
+			cout << "#" << test_case << "0" << sum << endl;
 		}
 	}
 	return 0;//정상종료시 반드시 0을 리턴해야합니다.
