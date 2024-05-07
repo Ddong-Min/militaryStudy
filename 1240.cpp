@@ -20,10 +20,7 @@ int main(int argc, char** argv)
 	int test_case;
 	int T;
     int row, column;
-	int start_row,end_column, start_column=-1;
 	char c;
-	int code[100][100];
-	int realCode[8];
 	int numbers[10][7]={{0,0,0,1,1,0,1},{0,0,1,1,0,0,1}, {0,0,1,0,0,1,1}, {0,1,1,1,1,0,1}, {0,1,0,0,0,1,1},{0,1,1,0,0,0,1}, {0,1,0,1,1,1,1}, {0,1,1,1,0,1,1}, {0,1,1,0,1,1,1},{0,0,0,1,0,1,1}};
 	//freopen("input.txt", "r", stdin);
 	cin>>T;
@@ -32,6 +29,8 @@ int main(int argc, char** argv)
 	{
 		cin >> row >> column;
 		int start_row,end_column, start_column=-1;
+		int code[100][100];
+		int realCode[8];
 		for(int i=0; i<row; i++){
 			for(int j=0; j<column; j++){
 				cin >> c;
@@ -75,7 +74,7 @@ int main(int argc, char** argv)
 			cout << "#" << test_case << " " << sum << endl;
 		}
 		else{
-			cout << "#" << test_case << "0" << sum << endl;
+			cout << "#" << test_case << " " << "0"<< endl;
 		}
 	}
 	return 0;//정상종료시 반드시 0을 리턴해야합니다.
