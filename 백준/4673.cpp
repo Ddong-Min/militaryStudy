@@ -8,18 +8,18 @@ int main(int argc, char** argv)
 {
     int num;
     int temp;
-    int arr[10001]={ };
+    int arr[10001]={};
     for(int i = 1; i <= 10000; i++){
         if(arr[i] == 0){
         cout << i << endl;
         num = i;
         for(;num<=10000;){
+            if(arr[num] == 1) break;
+            arr[num] = 1;
             temp = num;
             for(;temp > 0;temp/=10){
                 num += temp%10;
             }
-            if(arr[num] == 1) break;
-            arr[num] = 1;
             }
         }
     }
