@@ -19,7 +19,7 @@ int main(int argc, char** argv)
         }
     }
     return 0;
-}
+}s
 */
 
 //using 에라토스테네스의 체
