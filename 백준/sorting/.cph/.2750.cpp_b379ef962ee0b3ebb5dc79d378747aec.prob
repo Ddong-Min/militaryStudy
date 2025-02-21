@@ -1,0 +1,1 @@
+{"name":"Local: 2750","url":"/workspaces/militaryStudy/백준/sorting/2750.cpp","tests":[{"id":1740091211660,"input":"5\n5\n2\n3\n4\n1","output":"1\n2\n3\n4\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/militaryStudy/백준/sorting/2750.cpp","group":"local","local":true}
