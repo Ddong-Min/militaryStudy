@@ -1,0 +1,1 @@
+{"name":"Local: 30802","url":"/workspaces/militaryStudy/백준/class2/30802.cpp","tests":[{"id":1740146313027,"input":"23\n3 1 4 1 5 9\n5 7","output":"7\n3 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/militaryStudy/백준/class2/30802.cpp","group":"local","local":true}
