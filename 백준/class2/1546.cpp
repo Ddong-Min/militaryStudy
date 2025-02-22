@@ -13,7 +13,7 @@ int main(){
     for(int i=0; i<n; i++){
         sum += (score[i]/score[max])*100;
     }
-    /* cout에서 소수점 설정ㄴ */
+    /* cout에서 소수점 설정 */
     cout << fixed;
     cout.precision(5);
     cout << sum/n;
