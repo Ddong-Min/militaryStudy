@@ -1,0 +1,1 @@
+{"name":"Local: 10773","url":"/workspaces/militaryStudy/백준/class2/10773.cpp","tests":[{"id":1740522405544,"input":"4\n3\n0\n4\n0","output":"0"},{"id":1740522410283,"input":"10\n1\n3\n5\n4\n0\n0\n7\n0\n0\n6","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/militaryStudy/백준/class2/10773.cpp","group":"local","local":true}
