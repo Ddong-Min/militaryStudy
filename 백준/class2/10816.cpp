@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -32,38 +33,70 @@ void quickSort(vector<int>& arr, int start, int end){
     quickSort(arr,j+1,end);
 }
 
-int binarySearch(vector<int>& arr, int start, int end, int data){
-    int mid = (start+end)/2;
-    if(data == arr[mid]) return mid;
-    else if(start >= end) return -1;
-    else if(data > arr[mid]) return binarySearch(arr,mid+1,end,data);
-    else if(data < arr[mid]) return binarySearch(arr, start, mid-1,data);
+int lowerbound(vector<int>& arr, int start, int end, int data){
+    while(start<=end){
+        int mid = (start+end)/2;
+        if(data > arr[mid]) start = mid+1;
+        else end = mid-1;
+    }
+    return start;
 }
+
+int upperbound(vector<int>& arr, int start, int end, int data){
+    while(start<=end){
+        int mid = (start+end)/2;
+        if(data >= arr[mid]) start = mid+1;
+        else end = mid-1;
+    }
+    return start;
+}
+
 int main(){
+    //이걸 쓰니까 합격함
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
     int N, M, ans;
     cin >> N;
     vector<int> arr(N);
     for(int i=0; i<N; i++){
         cin >> arr[i];
     }
-    //quickSort(arr,0,N-1);
-    sort(arr.begin(), arr.end());
+    quickSort(arr,0,N-1);
+    //sort(arr.begin(), arr.end());
     cin >> M;
 
     for(int i=0; i<M; i++){
         int count=0;
         cin >> ans;
-        int point = binarySearch(arr,0,N-1,ans);
-        if(point != -1){
-            int tpoint = point;
-            while(tpoint >= 0 && arr[tpoint--]== ans){
-                count++;
-            }
-            while(point < N-1 && arr[++point]==ans){
-                count++;
-            }
-        }
-        cout << count << " ";
+        cout << upperbound(arr,0,N-1,ans)-lowerbound(arr,0,N-1,ans) << " ";
+        //cout << upper_bound(arr.begin(), arr.end(), ans) - lower_bound(arr.begin(), arr.end(), ans) << " ";
     }
     
+} */
+
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    map<int, int> m;
+    int N, M, n;
+    cin >> N;
+
+    while(N--){
+        cin >> n;
+        m[n]++; 
+    }
+    cin >> M;
+    while(M--){
+        cin >> n;
+        auto it = m.find(n);
+
+        if(it != m.end()) cout << it->second << " ";
+        else cout << "0" << " ";
+    }
 }

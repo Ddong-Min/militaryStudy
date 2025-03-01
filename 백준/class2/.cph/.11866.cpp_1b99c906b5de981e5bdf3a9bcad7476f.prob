@@ -1,0 +1,1 @@
+{"name":"Local: 11866","url":"/workspaces/militaryStudy/백준/class2/11866.cpp","tests":[{"id":1740804418215,"input":"7 3","output":"<3, 6, 2, 7, 5, 1, 4>"},{"id":1740805232801,"input":"9 2","output":"<2, 4, 6, 8, 1, 5, 9, 7, 3>"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/workspaces/militaryStudy/백준/class2/11866.cpp","group":"local","local":true}
